@@ -30,7 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.ldapAuthentication()
 					.userDnPatterns("uid={0},ou=people")
 					.groupSearchBase("ou=groups")
-					.contextSource().ldif("classpath:test-server.ldif");
+					.contextSource().ldif("classpath:test-server.ldif")
+					.root("dc=wellsfargo,dc=com");
 		}
 	}
 }
